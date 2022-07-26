@@ -13,3 +13,19 @@
         </select>
     </form>
 </div>
+
+@*
+    Here we will use Razor syntax to write C# code which will
+    generate the layout for the recipe steps.
+*@
+@if (Model.Drink != Drink.UNSELECTED)
+{
+    @foreach (String str in @Model.RecipeSteps)
+    {
+        Int32 i = Model.RecipeSteps.IndexOf(str) + 1;
+        <div>
+            <h2>Step @i</h2>
+            <p>@str</p>
+        </div>
+    }
+}
