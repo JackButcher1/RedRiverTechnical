@@ -5,5 +5,11 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4">Hi! Please choose a drink</h1>
+    <form method="post">
+        <select asp-for="Drink"
+                asp-items="Html.GetEnumSelectList<Drink>()"
+                onchange="this.form.submit();">
+        </select>
+    </form>
 </div>
