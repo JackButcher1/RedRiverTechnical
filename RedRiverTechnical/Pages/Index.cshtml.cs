@@ -65,7 +65,10 @@ namespace RedRiverTechnical.Pages
          */
         public async Task<IActionResult> OnPost()
         {
-            RecipeSteps = recipes[Drink];
+            if (Drink != Drink.UNSELECTED)
+            {
+                RecipeSteps = recipes[Drink];
+            }
 
             return Page();
         }
