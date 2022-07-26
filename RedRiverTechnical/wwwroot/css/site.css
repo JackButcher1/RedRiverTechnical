@@ -16,3 +16,13 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+select {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+h2 {
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
